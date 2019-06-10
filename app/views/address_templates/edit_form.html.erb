@@ -1,0 +1,74 @@
+<h1>
+  Edit address #<%= @address.id %>
+</h1>
+
+<hr>
+
+<form action="/update_address/<%= @address.id %>" method="post">
+
+  <div class="form-group">
+    <label for="street_number">
+      Street number
+    </label>
+
+    <input type="text" id="street_number" name="street_number" class="form-control" value="<%= @address.street_number %>">
+  </div>
+
+  <div class="form-group">
+    <label for="street">
+      Street
+    </label>
+
+    <input type="text" id="street" name="street" class="form-control" value="<%= @address.street %>">
+  </div>
+
+  <div class="form-group">
+    <label for="city">
+      City
+    </label>
+
+    <input type="text" id="city" name="city" class="form-control" value="<%= @address.city %>">
+  </div>
+
+  <div class="form-group">
+    <label for="postal_code">
+      Postal code
+    </label>
+
+    <input type="text" id="postal_code" name="postal_code" class="form-control" value="<%= @address.postal_code %>">
+  </div>
+
+  <div class="form-group">
+    <label for="state">
+      State
+    </label>
+
+    <input type="text" id="state" name="state" class="form-control" value="<%= @address.state %>">
+  </div>
+
+  <div class="form-group">
+    <label for="country">
+      Country
+    </label>
+
+    <input type="text" id="country" name="country" class="form-control" value="<%= @address.country %>">
+  </div>
+
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <input type="text" id="name" name="name" class="form-control" value="<%= @address.name %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update address
+  </button>
+</form>
+
+<hr>
+
+<a href="/addresses">
+  Go back
+</a>

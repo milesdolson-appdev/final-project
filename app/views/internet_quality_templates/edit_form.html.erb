@@ -1,0 +1,26 @@
+<h1>
+  Edit internet quality #<%= @internet_quality.id %>
+</h1>
+
+<hr>
+
+<form action="/update_internet_quality/<%= @internet_quality.id %>" method="post">
+
+  <div class="form-group">
+    <label for="quality">
+      Quality
+    </label>
+
+    <input type="text" id="quality" name="quality" class="form-control" value="<%= @internet_quality.quality %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update internet quality
+  </button>
+</form>
+
+<hr>
+
+<a href="/internet_qualities">
+  Go back
+</a>

@@ -1,0 +1,26 @@
+<h1>
+  Edit neighborhood #<%= @neighborhood.id %>
+</h1>
+
+<hr>
+
+<form action="/update_neighborhood/<%= @neighborhood.id %>" method="post">
+
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <input type="text" id="name" name="name" class="form-control" value="<%= @neighborhood.name %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update neighborhood
+  </button>
+</form>
+
+<hr>
+
+<a href="/neighborhoods">
+  Go back
+</a>

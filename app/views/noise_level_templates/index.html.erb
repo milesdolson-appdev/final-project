@@ -1,0 +1,66 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All noise levels
+    </h1>
+
+    <a href="/noise_levels/new" class="btn btn-block btn-outline-secondary">
+      Add a new noise level
+    </a>
+  </div>
+</div>
+
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Level
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @noise_levels.each do |noise_level| %>
+      <tr>
+        <td>
+          <%= noise_level.id %>
+        </td>
+
+        <td>
+          <%= noise_level.level %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(noise_level.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(noise_level.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/noise_levels/<%= noise_level.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

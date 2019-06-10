@@ -1,0 +1,66 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All internet qualities
+    </h1>
+
+    <a href="/internet_qualities/new" class="btn btn-block btn-outline-secondary">
+      Add a new internet quality
+    </a>
+  </div>
+</div>
+
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Quality
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @internet_qualities.each do |internet_quality| %>
+      <tr>
+        <td>
+          <%= internet_quality.id %>
+        </td>
+
+        <td>
+          <%= internet_quality.quality %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(internet_quality.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(internet_quality.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/internet_qualities/<%= internet_quality.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<h1>
+  Edit bookmark #<%= @bookmark.id %>
+</h1>
+
+<hr>
+
+<form action="/update_bookmark/<%= @bookmark.id %>" method="post">
+
+  <div class="form-group">
+    <label for="study_location_id">
+      Study location
+    </label>
+
+    <input type="text" id="study_location_id" name="study_location_id" class="form-control" value="<%= @bookmark.study_location_id %>">
+  </div>
+
+  <div class="form-group">
+    <label for="category_id">
+      Category
+    </label>
+
+    <input type="text" id="category_id" name="category_id" class="form-control" value="<%= @bookmark.category_id %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update bookmark
+  </button>
+</form>
+
+<hr>
+
+<a href="/bookmarks">
+  Go back
+</a>

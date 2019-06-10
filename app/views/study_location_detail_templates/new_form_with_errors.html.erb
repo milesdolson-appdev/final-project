@@ -1,0 +1,86 @@
+<!-- Validation failure messages -->
+<% if @study_location_detail.present? %>
+  <% if @study_location_detail.errors.any? %>
+    <% @study_location_detail.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new study location detail
+</h1>
+
+
+<hr>
+
+<form action="/create_study_location_detail" method="post">
+
+  <div class="form-group">
+    <label for="ambience_id">
+      Ambience
+    </label>
+
+    <input type="text" id="ambience_id" name="ambience_id" class="form-control" value="<%= @study_location_detail.ambience_id %>">
+  </div>
+
+  <div class="form-group">
+    <label for="noise_level_id">
+      Noise level
+    </label>
+
+    <input type="text" id="noise_level_id" name="noise_level_id" class="form-control" value="<%= @study_location_detail.noise_level_id %>">
+  </div>
+
+  <div class="form-group">
+    <label for="internet_quality_id">
+      Internet quality
+    </label>
+
+    <input type="text" id="internet_quality_id" name="internet_quality_id" class="form-control" value="<%= @study_location_detail.internet_quality_id %>">
+  </div>
+
+  <div class="form-group">
+    <label for="plug_availability_id">
+      Plug availability
+    </label>
+
+    <input type="text" id="plug_availability_id" name="plug_availability_id" class="form-control" value="<%= @study_location_detail.plug_availability_id %>">
+  </div>
+
+  <div class="form-group">
+    <label for="neighborhood_id">
+      Neighborhood
+    </label>
+
+    <input type="text" id="neighborhood_id" name="neighborhood_id" class="form-control" value="<%= @study_location_detail.neighborhood_id %>">
+  </div>
+
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @study_location_detail.user_id %>">
+  </div>
+
+  <div class="form-group">
+    <label for="address_id">
+      Address
+    </label>
+
+    <input type="text" id="address_id" name="address_id" class="form-control" value="<%= @study_location_detail.address_id %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create study location detail
+  </button>
+</form>
+
+<hr>
+
+<a href="/study_location_details">
+  Go back
+</a>

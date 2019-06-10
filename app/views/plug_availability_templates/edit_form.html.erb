@@ -1,0 +1,26 @@
+<h1>
+  Edit plug availability #<%= @plug_availability.id %>
+</h1>
+
+<hr>
+
+<form action="/update_plug_availability/<%= @plug_availability.id %>" method="post">
+
+  <div class="form-group">
+    <label for="availability">
+      Availability
+    </label>
+
+    <input type="text" id="availability" name="availability" class="form-control" value="<%= @plug_availability.availability %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update plug availability
+  </button>
+</form>
+
+<hr>
+
+<a href="/plug_availabilities">
+  Go back
+</a>

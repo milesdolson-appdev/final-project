@@ -1,0 +1,66 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All ambiences
+    </h1>
+
+    <a href="/ambiences/new" class="btn btn-block btn-outline-secondary">
+      Add a new ambience
+    </a>
+  </div>
+</div>
+
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Description
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @ambiences.each do |ambience| %>
+      <tr>
+        <td>
+          <%= ambience.id %>
+        </td>
+
+        <td>
+          <%= ambience.description %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(ambience.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(ambience.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/ambiences/<%= ambience.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

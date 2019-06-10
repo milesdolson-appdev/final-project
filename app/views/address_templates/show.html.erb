@@ -1,0 +1,93 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Address #<%= @address.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/addresses" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="/addresses/<%= @address.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit address
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="/delete_address/<%= @address.id %>" class="btn btn-block btn-outline-secondary">
+          Delete address
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Street number
+      </dt>
+      <dd>
+        <%= @address.street_number %>
+      </dd>
+
+      <dt>
+        Street
+      </dt>
+      <dd>
+        <%= @address.street %>
+      </dd>
+
+      <dt>
+        City
+      </dt>
+      <dd>
+        <%= @address.city %>
+      </dd>
+
+      <dt>
+        Postal code
+      </dt>
+      <dd>
+        <%= @address.postal_code %>
+      </dd>
+
+      <dt>
+        State
+      </dt>
+      <dd>
+        <%= @address.state %>
+      </dd>
+
+      <dt>
+        Country
+      </dt>
+      <dd>
+        <%= @address.country %>
+      </dd>
+
+      <dt>
+        Name
+      </dt>
+      <dd>
+        <%= @address.name %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@address.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@address.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+

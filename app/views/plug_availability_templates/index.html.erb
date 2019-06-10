@@ -1,0 +1,66 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All plug availabilities
+    </h1>
+
+    <a href="/plug_availabilities/new" class="btn btn-block btn-outline-secondary">
+      Add a new plug availability
+    </a>
+  </div>
+</div>
+
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Availability
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @plug_availabilities.each do |plug_availability| %>
+      <tr>
+        <td>
+          <%= plug_availability.id %>
+        </td>
+
+        <td>
+          <%= plug_availability.availability %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(plug_availability.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(plug_availability.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/plug_availabilities/<%= plug_availability.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

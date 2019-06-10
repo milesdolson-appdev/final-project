@@ -1,0 +1,38 @@
+<!-- Validation failure messages -->
+<% if @internet_quality.present? %>
+  <% if @internet_quality.errors.any? %>
+    <% @internet_quality.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new internet quality
+</h1>
+
+
+<hr>
+
+<form action="/create_internet_quality" method="post">
+
+  <div class="form-group">
+    <label for="quality">
+      Quality
+    </label>
+
+    <input type="text" id="quality" name="quality" class="form-control" value="<%= @internet_quality.quality %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create internet quality
+  </button>
+</form>
+
+<hr>
+
+<a href="/internet_qualities">
+  Go back
+</a>
