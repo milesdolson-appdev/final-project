@@ -151,16 +151,16 @@ puts "There are now #{StudyLocationDetail.count} rows in the studylocationdetail
   end
 
   task bookmarks: :environment do
-  require "csv"
+        require "csv"
 
 csv_text = File.read(Rails.root.join("lib", "csvs", "bookmarks.csv"))
 csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
 csv.each do |row|
-  t = StudyLocationDetail.new
+  t = Bookmark.new
   t.study_location_detail_id = row["study_location_detail_id"]
   t.category_id = row["category_id"]
   t.save
-  puts "#{t.study_location_id}, #{t.category_id} saved"
+  puts "#{t.study_location_detail_id} saved"
 end
 
 puts "There are now #{Bookmark.count} rows in the bookmarks table"

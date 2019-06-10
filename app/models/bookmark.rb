@@ -10,6 +10,6 @@
 #
 
 class Bookmark < ApplicationRecord
-    belongs_to :study_location_detail
+    belongs_to :study_location, :class_name => "StudyLocationDetail", :foreign_key => "study_location_detail_id"
     belongs_to :category
 end

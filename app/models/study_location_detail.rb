@@ -16,7 +16,7 @@
 
 class StudyLocationDetail < ApplicationRecord
 belongs_to :user
-has_many :bookmarks, :dependent => :destroy
+has_many :favorites, :class_name => "Bookmark", :dependent => :destroy
 belongs_to :location, :class_name => "Neighborhood", :foreign_key => "neighborhood_id"
 belongs_to :ambience
 belongs_to :noise_level
