@@ -1,0 +1,40 @@
+<h1>Recent Thought Spots</h1>
+
+<table>
+  <tr>
+    <th>Location Name</th>
+    <th>Ambience</th>
+    <th>Noise Level</th>
+    <th>Internet Quality</th>
+    <th>Plug Availability</th>
+    <th>Neighborhood</th>
+  </tr>
+  
+   <% @recent.each do |spot| %>
+  <tr>
+    <td>
+      <%= spot.recentambiences %>
+    </td>
+
+    <td>
+      <%= spot.recentnoiselevels %>
+    </td>
+
+    <td>
+      <%= spot.recentinternetqualities %>
+    </td>
+
+    <td>
+      <%= spot.recentplugavailabilities %>
+    </td>
+
+    <td>
+      <%= spot.recentplugavailabilities %>
+    </td>
+
+    <td>
+      <%= spot.recentneighborhoods %>
+    </td>
+  </tr>
+  <% end %>
+</table>

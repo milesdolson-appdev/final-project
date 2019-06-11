@@ -15,7 +15,8 @@ GIT
 
 GIT
   remote: https://github.com/firstdraft/draft_generators.git
-  revision: 5d636d1671fe28ebd39a5c35c39223fd3161f839
+  revision: bcff710bd1ad6652ed5f9861104eeac518c29d31
+  branch: spring-2019
   specs:
     draft_generators (0.0.3)
       devise
@@ -372,6 +373,7 @@ DEPENDENCIES
   binding_of_caller
   byebug
   capybara
+  coffee-rails
   console_ip_whitelist!
   dev_toolbar!
   devise

@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem "coffee-rails"
 gem "activeadmin"
 gem "devise"
 gem "jbuilder", "~> 2.5"
@@ -36,7 +37,7 @@ group :development do
   gem "annotate"
   gem "awesome_print"
   gem "dev_toolbar", github: "firstdraft/dev_toolbar"
-  gem "draft_generators", github: "firstdraft/draft_generators"
+  gem "draft_generators", github: "firstdraft/draft_generators", branch: "spring-2019"
   gem "letter_opener"
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "meta_request"
